@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+participant  bibliotecario as user
+boundary InterfazBiblioteca as if1
+
+user -> if1: Peticion para listar recurso(GET)
+if1 --> Api: Redirecciona peticion a api
+database Mongo as db
+Api --> db :consulta recursos
+db  --> Api: Envia mensaje HTTP de aceptacion(con lista de recursos) o error
+Api  --> if1: Envia mensaje(con listas de recurso) o con error
+if1 -->user: recibe mensaje(con lista de recurso )o con error
+
+@enduml

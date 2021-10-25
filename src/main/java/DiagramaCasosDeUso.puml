@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+actor Bibliotecario as b
+package ApiBiblioteca{
+usecase "Actualizar Recurso" as uc1
+usecase "Consular Disponibilidad de Recurso " as uc2
+usecase "Crear Recurso" as uc3
+usecase "Devolver recurso" as uc4
+usecase "Eliminar Recurso" as uc5
+usecase "Guardar Recurso" as uc6
+usecase "Listar Recurso" as uc7
+usecase "Prestar Resurso" as uc8
+usecase "Recomendar por tematica" as uc9
+usecase "Recomendar por tipo" as uc10
+usecase "Recomendar por tematica y tipo" as uc11
+}
+b -->uc1
+b -->uc2
+b -->uc3
+b -->uc4
+b -->uc5
+b -->uc6
+b -->uc7
+b -->uc8
+b -->uc9
+b -->uc10
+b -->uc11
+@enduml
